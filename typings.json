@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20161119044246",
+    "node": "registry:env/node#6.0.0+20161105011511"
+  },
+  "dependencies": {
+    "cheerio": "registry:npm/cheerio#0.20.0+20160422172414",
+    "mkdirp": "registry:npm/mkdirp#0.5.0+20160723033700"
+  }
+}
