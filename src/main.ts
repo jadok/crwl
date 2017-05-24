@@ -1,6 +1,6 @@
 /// <reference path="_all.d.ts" />
 "use strict";
-import * as http from "http";
+import * as https from "https";
 import * as cheerio from "cheerio";
 import * as fs from "fs";
 import * as mkdirp from "mkdirp";
@@ -10,8 +10,9 @@ import SEOXData from "./seohx";
 import StoreData from "./store";
 
 var url = process.argv[2];
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
-http.get(url, function(res) {
+https.get(url, function(res) {
   console.log("Got response: " + res.statusCode);
   let rawData = '';
   res.on('data', (chunk) => rawData += chunk);
